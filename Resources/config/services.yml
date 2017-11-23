@@ -1,0 +1,11 @@
+services:
+    akhann_form_bucket.configuration.form_bucket:
+        class: Akhann\Bundle\FormBucketBundle\Configuration\FormBucketConfiguration
+        arguments: ["%akhann_form_bucket.endpoint%"]
+
+    akhann_form_bucket.twig_extension:
+        class: Akhann\Bundle\FormBucketBundle\Twig\FormBucketExtension
+        public: false
+        arguments: ["@akhann_form_bucket.configuration.form_bucket"]
+        tags:
+            - { name: twig.extension }
