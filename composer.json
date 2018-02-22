@@ -1,7 +1,13 @@
 {
     "name": "akhann/form-bucket-bundle",
+    "type": "symfony-bundle",
     "description": "Bundle for using formbucket services (https://www.formbucket.com/) on symfony project.",
     "require": {
         "php": "^5.3.3 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Akhann\\Bundle\\FormBucketBundle\\": ""
+        }
     }
 }
