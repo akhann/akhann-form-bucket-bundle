@@ -1,9 +1,14 @@
-<form id="contact" data-formbucket data-options='{	"successClass": ".success",	"errorClass": ".error" }' action="{{ akhann_form_bucket_endpoint() }}" method="post" target="_blank">
+<div class="ak-contact-form">
 	<div class="success alert alert-success">
-        <p><strong class="fa fa-check"></strong> Your message has been sent successfully.</p>
-    </div>
-    <div class="error alert alert-warning">
-        <p><strong class="fa fa-exclamation-circle"></strong> An error occured while sending the message, please try again.</p>
-    </div>
-    {% include 'AkhannFormBucketBundle:form:form_content.html.twig' %}
-</form>
+	    <p><strong class="fa fa-check"></strong> Your message has been sent successfully.</p>
+	</div>
+	<div class="error alert alert-warning">
+	    <p><strong class="fa fa-exclamation-circle"></strong> An error occured while sending the message, please try again.</p>
+	</div>
+
+	<form id="contact" data-formbucket data-options='{	"successClass": ".success",	"errorClass": ".error" }' action="{{ akhann_form_bucket_endpoint() }}" method="post" target="_blank">
+
+	    {% include 'AkhannFormBucketBundle:form:form_content.html.twig' %}
+	</form>
+</div>
+
