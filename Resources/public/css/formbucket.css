@@ -1,0 +1,6 @@
+.ak-contact-form .error, .ak-contact-form .success {
+    display: none;
+    color:#333;
+}
+.ak-contact-form .success{display:none; font-size:13px;color: #333;}
+.ak-contact-form .error{display:none; font-size:13px;color: #333;}
