@@ -51,7 +51,7 @@ $ app/console assets:install
 >
 * folder should contain 2 files 
     * form_content.html.twig
-    *form.html.twig
+    * form.html.twig
     
 > note: no need to overide this file for all projects, only when customising error and success message. 
 
