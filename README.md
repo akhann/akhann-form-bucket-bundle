@@ -42,8 +42,14 @@ akhann_form_bucket:
 $ app/console cache:clear
 $ app/console assets:install
 ```
-#### Test Form
-* run server and go to the page where form has been included
-* default form should show up if the bundle has been correctly installed
+
+## Overide
+* Copy form folder from /vendor/akhann/form-bucket-bundle/Resources/views to /app/Resources/AkhannFormBucketBundle/views/form
+* folder should contain 2 files 
+    * form_content.html.twig
+    > All form content goes in that file
+    *form.html.twig
+    > Contains the structure of the form, success or error message  
+    > note: no need to overide this file for all projects, only when customising error and success message. 
 
 
