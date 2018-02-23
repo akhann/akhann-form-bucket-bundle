@@ -46,7 +46,7 @@ $ app/console assets:install
 ## Overide
 * Copy form folder from 
 > /vendor/akhann/form-bucket-bundle/Resources/views 
-> to 
+* to 
 > /app/Resources/AkhannFormBucketBundle/views/form
 >
 * folder should contain 2 files 
