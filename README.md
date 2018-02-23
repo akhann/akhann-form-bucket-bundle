@@ -19,8 +19,10 @@ new Akhann\Bundle\FormBucketBundle\AkhannFormBucketBundle(),
 ```
 #Akhann Form Bucket
 akhann_form_bucket:
-    endpoint: "url goes here"
+    endpoint: "https://api.formbucket.com/f/########"
 ```
+#### Dependencies
+* require [jquery](https://jquery.com/)
 
 #### Include form
 * This line goes in twig file where form should be.
@@ -29,6 +31,7 @@ akhann_form_bucket:
 ```
 #### Include Js file
 ```
+<script src="{{ asset('js/jquery-3.3.1.min') }}"></script>
 <script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}"></script>
 ```
 
@@ -54,5 +57,8 @@ $ app/console assets:install
     * form.html.twig
     
 > note: no need to overide this file for all projects, only when customising error and success message. 
+
+## Important Note
+* Js Validation not implemented in release 1.0.1, rely on HTML5 attribute.
 
 
