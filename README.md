@@ -31,3 +31,6 @@ akhann_form_bucket:
 $ php bin/console cache:clear
 $ php bin/console assets:install
 ```
+#### Test Form
+* run server and go to the page where form has been included
+* default form should show up if the bundle has been correctly installed
