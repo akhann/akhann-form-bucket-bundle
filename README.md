@@ -6,12 +6,14 @@ Bundle for using formbucket services (https://www.formbucket.com/) on symfony pr
 #### Installation with composer
 ```
 composer require akhann/form-bucket-bundle
+
 ```
 
 #### Enable the bundle
 * Add in app/AppKernel.php
 ```
 new Akhann\Bundle\FormBucketBundle\AkhannFormBucketBundle(),
+
 ```
 
 #### Configure the installed bundles
@@ -20,6 +22,7 @@ new Akhann\Bundle\FormBucketBundle\AkhannFormBucketBundle(),
 #Akhann Form Bucket
 akhann_form_bucket:
     endpoint: "https://api.formbucket.com/f/########"
+    
 ```
 #### Dependencies
 * require [jquery](https://jquery.com/)
@@ -28,22 +31,52 @@ akhann_form_bucket:
 * This line goes in twig file where form should be.
 ```
 {% include 'AkhannFormBucketBundle:form:form.html.twig' %}
+
 ```
 #### Include Js file
 ```
 <script src="{{ asset('js/jquery-3.3.1.min') }}"></script>
 <script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}"></script>
+
+```
+
+##### Function in the Js file accepts parameters
+```
+//deafult settings
+"successClass": ".success", 
+"errorClass": ".error" ,
+"validate": null
+
+```
+
+##### Example for a multiple chekboxk validation
+```
+<script type="text/javascript">
+    $('form[data-formbucket]').akFormBucket({
+        validate: function(form) {
+          checked = $("input[type=checkbox]:checked", form).length;
+          if(!checked) {
+            $(".checkErrorMsg").show();
+            return false;
+          }
+          return true;
+        }
+    }); 
+</script>
+
 ```
 
 #### Include Css file
 ```
 <link rel="stylesheet" href="{{ asset('bundles/akhannformbucket/css/formbucket.css')}}" rel="stylesheet" type="text/css" />
+
 ```
 
 #### Preparing environment
 ```
 $ app/console cache:clear
 $ app/console assets:install
+
 ```
 
 ## Overide
@@ -56,9 +89,6 @@ $ app/console assets:install
     * form_content.html.twig
     * form.html.twig
     
-> note: no need to overide this file for all projects, only when customising error and success message. 
-
-## Important Note
-* Js Validation not implemented in release 1.0.1, rely on HTML5 attribute.
+> note: There is no need to override form.html.twig for every project, only when error and success message need to be customized.
 
 
