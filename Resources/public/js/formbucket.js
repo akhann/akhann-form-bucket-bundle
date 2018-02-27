@@ -10,6 +10,7 @@
       }, options);
 
       $(this).submit(function(event) {
+        console.log('submit form')
         event.preventDefault();
 
         if (settings.validate && !settings.validate(this)) {
@@ -17,11 +18,12 @@
         }
 
         var subscribeForm = $(this);
-        var subscribeButton = $('input[type=submit]', subscribeForm);
+        var subscribeButton = $('input[type=submit],button[type=submit]', subscribeForm);
         subscribeButton.prop('disabled', false);
         var classSuccess = '.success';
         var classError = '.error';
           
+        subscribeButton.prop('disabled', 'disabled');
         $.ajax({
           url: subscribeForm.prop('action'),
           type: 'POST',
@@ -31,18 +33,15 @@
           },
           data: $($(this)).serialize(),
           beforeSend: function() {
-          subscribeButton.prop('disabled', 'disabled');
         }
         })
 
         .done(function(response) {
-          //alert('Thanks for subscribing!');
           subscribeForm.hide();
           $(settings.successClass).show();
         })
 
         .fail(function(response) {
-          //alert('Dang, something went wrong!');
           $(settings.errorClass).show();
           subscribeButton.prop('disabled', false);
         })
