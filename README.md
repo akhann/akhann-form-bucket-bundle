@@ -4,21 +4,21 @@ Bundle for using formbucket services (https://www.formbucket.com/) on symfony pr
 ## Installation
 
 #### Installation with composer
-```
+```bash
 composer require akhann/form-bucket-bundle
 
 ```
 
 #### Enable the bundle
 * Add in app/AppKernel.php
-```
+```php
 new Akhann\Bundle\FormBucketBundle\AkhannFormBucketBundle(),
 
 ```
 
 #### Configure the installed bundles
 * Add in app/config/config.yml
-```
+```yaml
 #Akhann Form Bucket
 akhann_form_bucket:
     endpoint: "https://api.formbucket.com/f/########"
@@ -29,19 +29,19 @@ akhann_form_bucket:
 
 #### Include form
 * This line goes in twig file where form should be.
-```
+```twig
 {% include 'AkhannFormBucketBundle:form:form.html.twig' %}
 
 ```
 #### Include Js file
-```
+```html
 <script src="{{ asset('js/jquery-3.3.1.min') }}"></script>
 <script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}"></script>
 
 ```
 
 ##### Customisable plugin options
-```
+```js
 //deafult settings
 "successClass": ".success", 
 "errorClass": ".error" ,
@@ -50,7 +50,7 @@ akhann_form_bucket:
 ```
 
 ##### Example for a multiple chekbox validation
-```
+```html
 <script type="text/javascript">
     $('form[data-formbucket]').akFormBucket({
         validate: function(form) {
@@ -67,13 +67,13 @@ akhann_form_bucket:
 ```
 
 #### Include Css file
-```
+```html
 <link rel="stylesheet" href="{{ asset('bundles/akhannformbucket/css/formbucket.css')}}" rel="stylesheet" type="text/css" />
 
 ```
 
 #### Preparing environment
-```
+```bash
 $ app/console cache:clear
 $ app/console assets:install
 
