@@ -37,7 +37,9 @@ akhann_form_bucket:
 ```html
 <script src="{{ asset('js/jquery-3.3.1.min') }}"></script>
 <script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}"></script>
-
+<script type="text/javascript">
+ $('form[data-formbucket]').akFormBucket();
+</script>
 ```
 
 ##### Customisable plugin options
