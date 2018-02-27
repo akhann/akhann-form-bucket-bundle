@@ -40,7 +40,7 @@ akhann_form_bucket:
 
 ```
 
-##### Function in the Js file accepts parameters
+##### Customisable plugin options
 ```
 //deafult settings
 "successClass": ".success", 
@@ -49,7 +49,7 @@ akhann_form_bucket:
 
 ```
 
-##### Example for a multiple chekboxk validation
+##### Example for a multiple chekbox validation
 ```
 <script type="text/javascript">
     $('form[data-formbucket]').akFormBucket({
