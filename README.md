@@ -71,7 +71,7 @@ akhann_form_bucket:
 
 #### Include Css file
 ```html
-<link rel="stylesheet" href="{{ asset('bundles/akhannformbucket/css/formbucket.css')}}" rel="stylesheet" type="text/css" />
+<link href="{{ asset('bundles/akhannformbucket/css/formbucket.css')}}" rel="stylesheet" type="text/css" />
 
 ```
 
