@@ -36,7 +36,8 @@ akhann_form_bucket:
 #### Include Js file
 ```html
 <script src="{{ asset('js/jquery-3.3.1.min') }}"></script>
-<script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}">
+<script src="{{ asset('bundles/akhannformbucket/js/formbucket.js') }}"></script>
+<script type="text/javascript">
     $(function(){
         $('form[data-formbucket]').akFormBucket();
     });
